@@ -1,0 +1,22 @@
+.track {
+    padding: 6px;
+    background-color: transparent;
+    border: 2px solid transparent;
+    border-radius: 20px;
+}
+
+.track_active {
+    border-color: #fff;
+    background-color: rgba(255, 255, 255, .5);
+}
+
+.track__img-wrap {
+    border-radius: 12px 12px 0px 0px;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.track__info {
+    background-color: #fff;
+    border-radius: 0 0 12px 12px;
+}
