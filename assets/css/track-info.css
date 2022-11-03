@@ -1,3 +1,15 @@
 .track__info {
+    text-align: left;
     
+}
+
+.track__title{
+    font-weight: 600;
+    text-transform: capitalize;
+    margin-bottom: 6px;
+}
+
+.track__artist {
+    font-weight: 300;
+    text-transform: capitalize;
 }
