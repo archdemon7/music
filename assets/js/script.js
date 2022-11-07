@@ -61,10 +61,10 @@ const pausePlayer = () => {
         trackActive.classList.add('track_pause')
     }
 }
-
+const trackInfoTitle = document.querySelector('.track-info__title');
+const trackInfoArtist = document.querySelector('.track-info__artist');
 const playMusic = event => {
     const trackActive = event.currentTarget;
-
     if (trackActive.classList.contains('track_active')) {
         pausePlayer();
         return;
@@ -75,13 +75,15 @@ const playMusic = event => {
         i = index;
         return id === item.id;
     });
+
     audio.src = track.src;
 
     audio.play();
 
     pauseBtn.classList.remove('player__icon_play');
     player.classList.add('player_active');
-
+    trackInfoTitle.innerText = playList[i].title;
+    trackInfoArtist.innerText = playList[i].artist;
     const prevTrack = i === 0 ? playList.length - 1 : i - 1;
     const nextTrack =  i + 1 === playList.length ? 0 : i + 1;
 
